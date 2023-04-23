@@ -1,6 +1,12 @@
-const burger = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.menu-btn');
 const lines = document.querySelectorAll('.line');
+const navUl = document.querySelector('[nav-ul]');
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
+menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    navUl.classList.toggle('active');
+});
+
+navUl.addEventListener('click', () => {
+    
 })
