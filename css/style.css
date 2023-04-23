@@ -5,13 +5,26 @@
     font-size: 62.5%;
     
 }
+:root {
+    --body-color: #f1f1f1;
+    --p-color: #fff;
+    --shadow-color: rgba(66, 66, 67, .2);
+    --l-black: rgb(32, 32, 32);
+    ---dropdown-color: #f7f7f7;
+
+}
 html {
 
 }
-
+body {
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    max-height: 100vw;
+    background-color: var(--body-color);
+}
 nav {
     /* background-color: rgb(38, 57, 75); */
-    background-image: linear-gradient(rgb(17, 17, 17), rgb(65, 65, 65));
+    /* background-image: linear-gradient(rgb(17, 17, 17), rgb(65, 65, 65)); */
     /* background-color:beige; */
     /* background-color:ghostwhite; */
     /* background-color:snow; */
@@ -21,7 +34,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     position: relative;
     /* background-color: yellow; */
 }
@@ -49,8 +62,8 @@ nav li {
 nav li a {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
-    /* color: black; */
-    color: #f8f8f8;
+    color: rgb(31, 31, 31);
+    /* color: #f8f8f8; */
 
     font-size: 15px;
     font-weight: bold;
@@ -59,8 +72,7 @@ nav li a {
 .logo-name h4 {
     letter-spacing: 5px;
     font-size: 18px;
-    color: black;
-    color: #f8f8f8;
+    color: var(--l-black);
 
     /* color: #fff; */
 
@@ -86,17 +98,23 @@ main {
     width: 100vw;
     height: fit-content;
     padding: 10rem;
-    background-color: orchid;
+    /* background-color: orchid; */
 }
 .left-main {
-    background-color: palegreen;
+    background-color: var(--p-color);
+    /* box-shadow: 0px 0px 4px var(--shadow-color); */
+    box-shadow: var(--shadow-color) 0px 0px 4px;
+
     width: 70%;
-    padding: .5rem;
+    padding: 1.5rem;
 }
 .right-main {
     width: 20%;
     min-height:100vh;
-    background-color: aqua;
+    background-color: var(--p-color);
+    box-shadow: var(--shadow-color) 0px 0px 4px;
+    
+
     padding: .5rem;
 }
 .menu-btn {
@@ -133,15 +151,18 @@ main {
     height: 3px;
     /* background-color: rgb(24, 24, 24); */
     /* color: #f8f8f8; */
-    background-color: #f8f8f8;
+    background-color: var(--l-black);
     border-radius: 5px;
     box-shadow: 1px 1px 1px rgba(61, 61, 61, .4);
     margin: 4px;
 }
 #top-title-img-container {
     width: 100vw;
-    /* background-color: lightgoldenrodyellow; */
     padding-left: 10rem;
+}
+.top-title-img-container-inner {
+    width: 70%;
+    height: 100%;
 }
 #top-title-img-container .container {    
     padding-right: 10rem;
@@ -150,13 +171,14 @@ main {
     margin: 0;
     padding: .5rem;
     /* font-family: 'Montserrat', sans-serif; */
-    font-size: 32px;
+    font-size: 24px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgba(0,0,0, .6)
 }
 .main-img {
-    width: 70%;
-    height: 350px;
+    box-shadow: var(--shadow-color) 0px 0px 4px;
+    width: 100%;
+    height: 400px;
 }
 
 .container {
@@ -203,6 +225,39 @@ p {
     
 
 }
+.article-links-bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100vw;
+    height: fit-content;
+    padding: 10px 100px;
+}
+.article-heading-bottom {
+ 
+}
+.links-container-bottom {
+   padding: 2px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 10px;
+   /* justify-content: flex-start; */
+
+   width: 70%;
+   height: 100%;
+   /* background-color: black; */
+    
+}
+.box-bottom {
+    /* margin: .2rem; */
+    /* width: 32%; */
+    height: 80px;
+    background-color: var(--p-color);
+    box-shadow: var(--shadow-color) 0px 0px 2px;
+
+    
+}
 
 @media screen and (max-width:1024px) {
    
@@ -216,13 +271,14 @@ p {
         display: block;
     }
     nav ul {
-        width: 40%;
+        width: 50%;
         position: absolute;
         right: 0px;
         top: 100%;
         height: 92vh;
-        background-image: linear-gradient(rgb(63, 63, 63), rgb(65, 65, 65));
-        
+        background-color: var(---dropdown-color);
+        box-shadow: var(--shadow-color) -4px 2px 4px;
+
         display: flex;
         flex-direction: column;
         justify-content: space-around;
