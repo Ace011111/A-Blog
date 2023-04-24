@@ -17,10 +17,11 @@ html {
 
 }
 body {
-    /* overflow: hidden; */
-    overflow-x: hidden;
-    max-width: 100vw;
     background-color: var(--body-color);
+}
+.wrapper {
+    overflow-x: hidden;
+
 }
 nav {
     /* background-color: rgb(38, 57, 75); */
@@ -311,8 +312,8 @@ p {
     }
 
     body {
-        overflow-x: hidden;
-        max-width: 100vw;
+        /* overflow-x: hidden;
+        max-width: 100vw; */
     }
     .menu-btn {
         display: block;
