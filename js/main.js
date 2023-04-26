@@ -15,6 +15,4 @@ navUl.addEventListener('click', () => {
 
 themeBtn.addEventListener('click', () => {
     themeBtn.classList.toggle('active');
-
-    
 });
